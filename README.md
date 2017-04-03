@@ -57,7 +57,7 @@
 
 4. To use:
 
-    Call following url to embed the text ```text that is to be protected```.
+    Call following url to embed the text ```the text that is to be protected```.
     ```url
     http://localhost:3000/JWTCheck/encode/the text that is to be protected
     ```
