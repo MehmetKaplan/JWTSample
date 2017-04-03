@@ -57,23 +57,23 @@
 
 4. To use:
 
-    - Call following url to embed the text ```text that is to be protected```.
-        ```chrome
-        http://localhost:3000/JWTCheck/encode/the text that is to be protected
-        ```
-        You should see the encrypted data like (but the encoded data must be different):
-        ```chrome
-        encoded output: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.InRoZSB0ZXh0IHRoYXQgaXMgdG8gYmUgcHJvdGVjdGVkIg.Cmqqtxmjy7CuWUqIq8YTnvwxEDdrJhgrSXchiG5PPh8
-        ```
-        Using this encoded data, to decrypt call:
-        ```chrome
-        http://localhost:3000/JWTCheck/decode/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.InRoZSB0ZXh0IHRoYXQgaXMgdG8gYmUgcHJvdGVjdGVkIg.Cmqqtxmjy7CuWUqIq8YTnvwxEDdrJhgrSXchiG5PPh8
-        ```
-        Now you must recover your message (or the "claim") which is ```the text that is to be protected```:
-        ```chrome
-        decoded output: 
-        The full array returned: ["the text that is to be protected", {"typ"=>"JWT", "alg"=>"HS256"}]
-        Payload: the text that is to be protected
-        Header: {"typ"=>"JWT", "alg"=>"HS256"}
-        ```
-        
+    Call following url to embed the text ```text that is to be protected```.
+    ```url
+    http://localhost:3000/JWTCheck/encode/the text that is to be protected
+    ```
+    You should see the encrypted data like (but the encoded data must be different):
+    ```text
+    encoded output: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.InRoZSB0ZXh0IHRoYXQgaXMgdG8gYmUgcHJvdGVjdGVkIg.Cmqqtxmjy7CuWUqIq8YTnvwxEDdrJhgrSXchiG5PPh8
+    ```
+    Using this encoded data, to decrypt call:
+    ```url
+    http://localhost:3000/JWTCheck/decode/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.InRoZSB0ZXh0IHRoYXQgaXMgdG8gYmUgcHJvdGVjdGVkIg.Cmqqtxmjy7CuWUqIq8YTnvwxEDdrJhgrSXchiG5PPh8
+    ```
+    Now you must recover your message (or the "claim") which is ```the text that is to be protected```:
+    ```text
+    decoded output: 
+    The full array returned: ["the text that is to be protected", {"typ"=>"JWT", "alg"=>"HS256"}]
+    Payload: the text that is to be protected
+    Header: {"typ"=>"JWT", "alg"=>"HS256"}
+    ```
+
